@@ -28,7 +28,7 @@ including image completion, interpolation, demosaicing and Poisson denoising.
 
 ### Interpolation (using set5 dataset)
 ```bash
-    python Interpolation.py -sf 2 -p	# 2x upsampling test, with preconditioning.
+    python Interpolation.py -sf 2 -p		# 2x upsampling test, with preconditioning.
 	python Interpolation.py -sf 2		# 2x upsampling test, without preconditioning.
 	python Interpolation.py -sf 4 -p	# 4x upsampling test, with preconditioning.
 	python Interpolation.py -sf 4		# 4x upsampling test, without preconditioning.
@@ -38,9 +38,9 @@ including image completion, interpolation, demosaicing and Poisson denoising.
 
 ```bash
 	python Completion.py -r 20 -p	# completion from 20% of known pixels, with preconditioning.
-	python Completion.py -r 20		# completion from 20% of known pixels, without preconditioning.
+	python Completion.py -r 20	# completion from 20% of known pixels, without preconditioning.
 	python Completion.py -r 10 -p	# completion from 10% of known pixels, with preconditioning.
-	python Completion.py -r 10		# completion from 10% of known pixels, without preconditioning.
+	python Completion.py -r 10	# completion from 10% of known pixels, without preconditioning.
 ```
 
 ### Demosaicing (using kodak dataset)
@@ -48,18 +48,18 @@ including image completion, interpolation, demosaicing and Poisson denoising.
 	# Noise-free Demosaicing
     python Demosaic.py -p			# with preconditioning, using generic denoiser DRUNET-var-RGB.
 	python Demosaic.py -p -dem		# with preconditioning, using specific denoiser DRUNET-dem.
-	python Demosaic.py 				# without preconditioning, using DRUNET-cst denoiser.
+	python Demosaic.py 			# without preconditioning, using DRUNET-cst denoiser.
 
 	# Joint Demosaicing-Denoising
     python Demosaic.py -sigma_noise_8b=20 -p		# noise level 20/255, with preconditioning, using generic denoiser DRUNET-var-RGB.
 	python Demosaic.py -sigma_noise_8b=20 -p -dem	# noise level 20/255, with preconditioning, using specific denoiser DRUNET-dem.
-	python Demosaic.py -sigma_noise_8b=20			# noise level 20/255, without preconditioning.
+	python Demosaic.py -sigma_noise_8b=20		# noise level 20/255, without preconditioning.
 ```	
 
 ### Poisson denoising (using set5 dataset)
 ```bash	
-    python PoissonDenoise.py -peak=255 -p				# Denoising for low Poisson noise level (peak=255), with preconditioning.
-	python PoissonDenoise.py -peak=255					# Denoising for low Poisson noise level (peak=255), without preconditioning.
+    python PoissonDenoise.py -peak=255 -p			# Denoising for low Poisson noise level (peak=255), with preconditioning.
+	python PoissonDenoise.py -peak=255			# Denoising for low Poisson noise level (peak=255), without preconditioning.
 	python PoissonDenoise.py -peak=1 -init_anscombe -p	# Denoising for very high Poisson noise level (peak=1), initialised with Anscombe method, with preconditioning.
 	python PoissonDenoise.py -peak=1 -init_anscombe		# Denoising for very high Poisson noise level (peak=1), initialised with Anscombe method, without preconditioning.
 ```
