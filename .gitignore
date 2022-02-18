@@ -1,0 +1,14 @@
+/model_zoo/*
+!/model_zoo/README.md
+
+/testsets/*
+!/testsets/CBSD68
+!/testsets/kodak
+!/testsets/McM
+!/testsets/set5
+
+/results/*
+
+/.idea
+
+**/__pycache__
